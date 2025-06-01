@@ -3,22 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz App </title>
+    <title>Quiz App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="quiz-container">
         <h1>Quiz App</h1>
-        <div id="quiz">
-            <div id="question">Question Text Here:</div>
-            <div id="answer"></div>
-            <button id="next-btn">Next</button>
+        <div class="quiz-header">
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="question-count">Question: <span id="question-number">1</span>/<span id="total-questions">5</span></div>
         </div>
-        <div id="result" class="hide">
-            <h2>Your Score: <span id="Score">0</span></h2>
-            <button id="restart-btn">Restart</button>
-        </div>
+        <div class="question" id="question"></div>
+        <div class="options" id="options"></div>
+        <button id="next-btn" class="next-btn">Next Question</button>
+        <button id="restart-btn" class="restart-btn">Restart Quiz</button>
     </div>
+
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
