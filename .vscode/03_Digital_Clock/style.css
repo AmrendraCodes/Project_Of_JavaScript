@@ -35,3 +35,11 @@ body{
         text-shadow: 0 0 20px #00ff9d, 0 0 30px #00ff9d88;
     }
 }
+
+button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 40px;
+}
