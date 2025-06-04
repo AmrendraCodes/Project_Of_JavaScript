@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+     background-color: white;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.dice-game {
+    text-align: center;
+    background: grey;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+#dice{
+    font-size: 100px;
+    margin: 20px 0;
+    
+}
+#roll-btn {
+    padding: 12px 24px;
+    font-size: 18px;
+    border: none;
+    background-color: #61dafb;
+    color: #000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease ;
+}
+#roll-btn:hover {
+    background-color: #21a1f1;
+
+}
+
+#resultText {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
