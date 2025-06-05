@@ -17,7 +17,7 @@ const answerButton = document.getElementById("answer-button");
 const nextBtn = document.getElementById("next-btn");
 const timerSidebar = document.getElementById("sidebar-timer");
 let timerInterval;
-let timeLeft = 5; 
+let timeLeft = 15; // Increased for better UX
 let score = 0;
 
 function showQuestion() {
@@ -32,7 +32,7 @@ function showQuestion() {
         answerButton.appendChild(btn);
     });
     nextBtn.style.display = "none";
-    startTimer(); 
+    startTimer();
 }
 
 function selectAnswer(index) {
@@ -58,15 +58,14 @@ function selectAnswer(index) {
 
 function startTimer() {
     clearInterval(timerInterval);
-    timeLeft = 5;
+    timeLeft = 15;
     updateTimerDisplay();
     timerInterval = setInterval(() => {
         timeLeft--;
         updateTimerDisplay();
         if (timeLeft <= 0) {
             clearInterval(timerInterval);
-            disableAnswers();
-            nextBtn.style.display = "block";
+            handleTimeOut();
         }
     }, 1000);
 }
@@ -82,7 +81,21 @@ function disableAnswers() {
     }
 }
 
+// Highlight correct answer and disable all buttons if time runs out
+function handleTimeOut() {
+    const correctIndex = questions[currentQuestionIndex].correct;
+    const buttons = answerButton.children;
+    for (let i = 0; i < buttons.length; i++) {
+        if (i === correctIndex) {
+            buttons[i].style.backgroundColor = "green";
+        }
+        buttons[i].disabled = true;
+    }
+    nextBtn.style.display = "block";
+}
+
 nextBtn.addEventListener("click", () => {
+    clearInterval(timerInterval); // Stop timer for next question
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
         showQuestion();
@@ -90,6 +103,7 @@ nextBtn.addEventListener("click", () => {
         questionE1.innerText = `Quiz Complete! Your score: ${score}/${questions.length}`;
         answerButton.innerHTML = "";
         nextBtn.style.display = "none";
+        timerSidebar.textContent = "";
     }
 });
 
