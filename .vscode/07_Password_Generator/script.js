@@ -11,7 +11,7 @@ function generatePass() {
 
     for (let i = 0; i < length; i++) {
         let randomIndex = Math.floor(Math.random() * charset.length);
-        password += charset[randomIndex];
+        password = password.concat(charset[randomIndex]);
     }
 
     document.getElementById("password").value = password;
