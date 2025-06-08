@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="numarea" disabled>
+        <div class="buttons">
+            <button class="button clear" onclick="ClearDisplay()">C</button>
+            <button class="button" onclick="Appendvalue('7')">7</button>
+            <button class="button" onclick="Appendvalue('8')">8</button>
+            <button class="button" onclick="Appendvalue('9')">9</button>
+            <button class="button operator" onclick="Appendvalue('/')">÷</button>
+
+            <button class="button" onclick="Appendvalue('4')">4</button>
+            <button class="button" onclick="Appendvalue('5')">5</button>
+            <button class="button" onclick="Appendvalue('6')">6</button>
+            <button class="button operator" onclick="Appendvalue('*')">×</button>
+
+            <button class="button" onclick="Appendvalue('1')">1</button>
+            <button class="button" onclick="Appendvalue('2')">2</button>
+            <button class="button" onclick="Appendvalue('3')">3</button>
+            <button class="button operator" onclick="Appendvalue('-')">−</button>
+
+            <button class="button" onclick="Appendvalue('0')">0</button>
+            <button class="button" onclick="Appendvalue('.')">.</button>
+            <button class="button equal" onclick="calculate()">=</button>
+            <button class="button operator" onclick="Appendvalue('+')">+</button>
+        </div>
+    </div>
+</body>
+<script src="simple_Calculator.js"></script>
+</html>
