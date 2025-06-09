@@ -1,0 +1,30 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+}
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+#colorInput {
+  width: 100px;
+  height: 50px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#colorDisplay {
+  margin-top: 20px;
+  padding: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #000;
+}
